@@ -4,7 +4,7 @@ This script converts pdb files to density maps
 import sys
 sys.path.append("..")
 
-op = {'situs_pdb2vol_program': '/shared/opt/local/img/em/et/util/situs/Situs_2.7.2/bin/pdb2vol',
+op = {'situs_pdb2vol_program': '../../../../../../aitom/structure/pdb/situs_pdb2vol.py',
       'spacing_s': [10.0],
       'resolution_s': [10.0],
       'pdb_dir': '../IOfile/pdbfile',
