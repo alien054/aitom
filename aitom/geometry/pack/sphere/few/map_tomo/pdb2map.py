@@ -7,9 +7,9 @@ sys.path.append("..")
 op = {'situs_pdb2vol_program': '/shared/opt/local/img/em/et/util/situs/Situs_2.7.2/bin/pdb2vol',
       'spacing_s': [10.0],
       'resolution_s': [10.0],
-      'pdb_dir': '/pdb/6M17.pdb',
-      'out_file': '/pdb/test.pickle',
-      'savepath': '/pdb/'
+      'pdb_dir': '../IOfile/pdbfile',
+      'out_file': '../IOfile/map_single/situs_maps.pickle',
+      'savepath': '../IOfile/map_single/'
       }
 
 

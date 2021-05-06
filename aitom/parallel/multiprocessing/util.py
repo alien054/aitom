@@ -15,7 +15,8 @@ def run_iterator(tasks, worker_num=multiprocessing.cpu_count(), verbose=False):
     if worker_num <= 1, just go for single processing
     """
     if verbose:
-        print('tomominer.parallel.multiprocessing.util.run_iterator()', 'start', time.time())
+        print('tomominer.parallel.multiprocessing.util.run_iterator()',
+              'start', time.time())
 
     worker_num = min(worker_num, multiprocessing.cpu_count())
 
@@ -60,7 +61,8 @@ def run_iterator(tasks, worker_num=multiprocessing.cpu_count(), verbose=False):
                 sys.stdout.flush()
 
     if verbose:
-        print('tomominer.parallel.multiprocessing.util.run_iterator()', 'end', time.time())
+        print('tomominer.parallel.multiprocessing.util.run_iterator()',
+              'end', time.time())
 
 
 # alias
@@ -73,8 +75,8 @@ def call_func(t):
     https://discuss.pytorch.org/t/why-does-numpy-random-rand-produce-the-same-values-in-different-cores/12005
     '''
     import numpy as N
-    N.random.seed(random.randint(0,123456789))
-    
+    N.random.seed(N.random.randint(0, 123456789))
+
     # call the function
     if 'func' in t:
         assert 'module' not in t
@@ -95,7 +97,8 @@ def run_batch_test__foo(a, b, c=0):
 def run_batch_test():
     ts = {}
     for i in range(100):
-        ts[i] = {'func': run_batch_test__foo, 'args': (i, i + 1), 'kwargs': {'c': i + 2}}
+        ts[i] = {'func': run_batch_test__foo, 'args': (
+            i, i + 1), 'kwargs': {'c': i + 2}}
 
     rs = run_batch(ts, worker_num=2)
     print([_ for _ in rs])
